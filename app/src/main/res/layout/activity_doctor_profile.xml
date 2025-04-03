@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Doctor Image (make it bigger) -->
+    <ImageView
+        android:id="@+id/doctorImage"
+        android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_gravity="center"
+    android:scaleType="centerCrop"
+    android:src="@drawable/sample_doctor"
+    android:contentDescription="Doctor Image"/>
+
+    <!-- Doctor Name -->
+    <TextView
+        android:id="@+id/doctorName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dr. John Doe"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Doctor Specialization -->
+    <TextView
+        android:id="@+id/doctorSpecialization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cardiologist"
+        android:textSize="16sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Doctor Rating -->
+    <RatingBar
+        android:id="@+id/doctorRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:rating="4.5"
+        android:stepSize="0.5"
+        android:layout_marginTop="8dp"
+        android:isIndicator="true"
+        style="?android:attr/ratingBarStyleSmall"/>
+
+    <!-- Doctor Certifications -->
+    <TextView
+        android:id="@+id/doctorCertifications"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Certifications: MBBS, MD"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Doctor Competencies -->
+    <TextView
+        android:id="@+id/doctorCompetencies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Competencies: Heart Surgery, ECG Analysis"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Doctor Languages -->
+    <TextView
+        android:id="@+id/doctorLanguages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Languages: English, Hindi"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Clinic Info -->
+    <TextView
+        android:id="@+id/clinicInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Clinic: Heart Care Clinic\nAddress: 123 Heart Ave, City"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Book Appointment Button -->
+    <Button
+        android:id="@+id/bookAppointmentButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Appointment"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>
