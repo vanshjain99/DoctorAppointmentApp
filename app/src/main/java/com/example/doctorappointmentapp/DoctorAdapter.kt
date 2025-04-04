@@ -11,7 +11,7 @@ import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DoctorAdapter(private val context: Context, private val doctorList: List<Doctor>) :
+class DoctorAdapter(private val context: Context, private var doctorList: List<Doctor>) :
     RecyclerView.Adapter<DoctorAdapter.DoctorViewHolder>() {
 
     class DoctorViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -51,6 +51,11 @@ class DoctorAdapter(private val context: Context, private val doctorList: List<D
             }
             context.startActivity(intent)
         }
+    }
+
+    fun updateList(newList: List<Doctor>) {
+        doctorList = newList
+        notifyDataSetChanged()
     }
 
     override fun getItemCount() = doctorList.size

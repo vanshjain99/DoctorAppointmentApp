@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.doctorappointmentapp.databinding.FragmentHomeBinding
+import android.text.Editable
+import android.text.TextWatcher
+
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -162,7 +165,21 @@ class HomeFragment : Fragment() {
         binding.recyclerViewDoctors.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerViewDoctors.adapter = doctorAdapter
 
+        binding.searchBar.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                filterDoctors(s.toString())
+            }
+            override fun afterTextChanged(s: Editable?) {}
+        })
+
         return binding.root
+    }
+    private fun filterDoctors(query: String) {
+        val filteredList = doctorList.filter {
+            it.name.contains(query, ignoreCase = true)
+        }
+        doctorAdapter.updateList(filteredList)
     }
 
     override fun onDestroyView() {
