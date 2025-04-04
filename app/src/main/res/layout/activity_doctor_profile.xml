@@ -12,7 +12,7 @@
     android:layout_height="150dp"
     android:layout_gravity="center"
     android:scaleType="centerCrop"
-    android:src="@drawable/sample_doctor"
+    android:src="@drawable/doctor1"
     android:contentDescription="Doctor Image"/>
 
     <!-- Doctor Name -->

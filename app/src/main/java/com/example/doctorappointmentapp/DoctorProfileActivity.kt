@@ -15,7 +15,7 @@ class DoctorProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_doctor_profile)
 
         // Get the data passed from the DoctorAdapter
-        val doctorImage = intent.getIntExtra("doctor_image", R.drawable.sample_doctor)
+        val doctorImage = intent.getIntExtra("doctor_image", R.drawable.doctor1)
         val doctorName = intent.getStringExtra("doctor_name")
         val doctorSpecialization = intent.getStringExtra("doctor_specialization")
         val doctorRating = intent.getFloatExtra("doctor_rating", 0.0f)

@@ -13,7 +13,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/sample_doctor"
+        android:src="@drawable/doctor1"
         android:background="@drawable/circle_shape"
         android:layout_marginEnd="12dp"/>
 
