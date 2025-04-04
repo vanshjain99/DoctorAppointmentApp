@@ -3,17 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@android:color/white">
 
-    <!-- Doctor Image (make it bigger) -->
+    <!-- Doctor Image (circular and bigger) -->
     <ImageView
         android:id="@+id/doctorImage"
         android:layout_width="150dp"
-    android:layout_height="150dp"
-    android:layout_gravity="center"
-    android:scaleType="centerCrop"
-    android:src="@drawable/doctor1"
-    android:contentDescription="Doctor Image"/>
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/doctor1"
+        android:contentDescription="Doctor Image"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/circular_shape"
+        android:elevation="4dp"/>
 
     <!-- Doctor Name -->
     <TextView
@@ -21,9 +26,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Dr. John Doe"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp"/>
 
     <!-- Doctor Specialization -->
     <TextView
@@ -33,7 +40,8 @@
         android:text="Cardiologist"
         android:textSize="16sp"
         android:textColor="@android:color/darker_gray"
-        android:layout_marginTop="8dp"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"/>
 
     <!-- Doctor Rating -->
     <RatingBar
@@ -43,8 +51,9 @@
         android:numStars="5"
         android:rating="4.5"
         android:stepSize="0.5"
-        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
         android:isIndicator="true"
+        android:layout_marginBottom="16dp"
         style="?android:attr/ratingBarStyleSmall"/>
 
     <!-- Doctor Certifications -->
@@ -54,7 +63,8 @@
         android:layout_height="wrap_content"
         android:text="Certifications: MBBS, MD"
         android:textSize="14sp"
-        android:layout_marginTop="16dp"/>
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp"/>
 
     <!-- Doctor Competencies -->
     <TextView
@@ -63,7 +73,8 @@
         android:layout_height="wrap_content"
         android:text="Competencies: Heart Surgery, ECG Analysis"
         android:textSize="14sp"
-        android:layout_marginTop="8dp"/>
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp"/>
 
     <!-- Doctor Languages -->
     <TextView
@@ -72,7 +83,8 @@
         android:layout_height="wrap_content"
         android:text="Languages: English, Hindi"
         android:textSize="14sp"
-        android:layout_marginTop="8dp"/>
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp"/>
 
     <!-- Clinic Info -->
     <TextView
@@ -81,14 +93,20 @@
         android:layout_height="wrap_content"
         android:text="Clinic: Heart Care Clinic\nAddress: 123 Heart Ave, City"
         android:textSize="14sp"
-        android:layout_marginTop="16dp"/>
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="24dp"/>
 
     <!-- Book Appointment Button -->
     <Button
         android:id="@+id/bookAppointmentButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Book Appointment"
-        android:layout_marginTop="24dp"/>
-
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="2dp"
+        android:layout_gravity="center"/>
 </LinearLayout>

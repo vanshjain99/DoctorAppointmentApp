@@ -1,74 +1,114 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@android:color/white">
 
+    <!-- Heading for Date Selection -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Date"
-        android:textSize="16sp"
-        android:textStyle="bold"/>
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp"/>
 
+    <!-- Date Picker -->
     <EditText
         android:id="@+id/date_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Select Date"
         android:focusable="false"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@android:color/black"/>
 
+    <!-- Heading for Time Selection -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Time"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginTop="10dp"/>
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
 
+    <!-- Time Picker -->
     <EditText
         android:id="@+id/time_picker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Select Time"
         android:focusable="false"
-        android:clickable="true"/>
+        android:clickable="true"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:textColor="@android:color/black"/>
 
-    <!-- Other Views go here, like appointment type, services, etc. -->
+    <!-- Appointment Type Selection -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Appointment Type"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
 
     <RadioGroup
         android:id="@+id/appointment_type_group"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
 
         <RadioButton
             android:id="@+id/radio_online"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Online Consultation"/>
+            android:text="Online Consultation"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:padding="10dp"/>
 
         <RadioButton
             android:id="@+id/radio_in_person"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="In-Person Visit"/>
+            android:text="In-Person Visit"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:padding="10dp"/>
     </RadioGroup>
 
+    <!-- Additional Services Checkbox -->
     <CheckBox
         android:id="@+id/extra_service_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Require additional services (e.g., lab tests)?"
-        android:layout_marginTop="10dp"/>
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="12dp"/>
 
+    <!-- Book Appointment Button -->
     <Button
         android:id="@+id/book_appointment_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Book Appointment"
-        android:layout_marginTop="20dp"/>
-
+        android:textSize="18sp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:layout_marginTop="24dp"
+        android:elevation="4dp"
+        android:layout_gravity="center"/>
 
 </LinearLayout>

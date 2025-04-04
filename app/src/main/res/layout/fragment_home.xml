@@ -4,33 +4,45 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_horizontal">
+    android:gravity="center_horizontal"
+    android:background="@color/background_color">
 
     <!-- ImageView for the rectangular image -->
     <ImageView
         android:id="@+id/homeImage"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/sample_image"
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"
+    android:elevation="4dp"
+    android:contentDescription="Home Image" />
 
     <!-- Search bar (EditText) -->
     <EditText
         android:id="@+id/searchBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Search for doctors or services"
-        android:padding="10dp"
+        android:layout_height="48dp"
+        android:hint="Search for doctors"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="@color/light_gray"
+        android:textSize="16sp"
         android:background="@drawable/search_bar_background"
-        android:inputType="text" />
+        android:inputType="text"
+        android:drawableLeft="@drawable/ic_search"
+    android:drawablePadding="12dp" />
 
+    <!-- RecyclerView for displaying doctors or services -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewDoctors"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
         android:scrollbars="vertical" />
 
 </LinearLayout>

@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@android:color/white">
 
     <!-- Heading -->
     <TextView
@@ -15,26 +16,33 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
-        android:paddingBottom="8dp"
-        android:layout_marginTop="20dp"/>
+        android:textColor="@color/blue_500"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"/>
 
     <!-- Delete All Button -->
     <Button
         android:id="@+id/delete_all_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Delete All Appointments"
-        android:layout_gravity="center"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="8dp" />
+        android:background="@drawable/button_background"
+    android:textColor="@android:color/white"
+    android:textSize="16sp"
+    android:layout_marginBottom="16dp"
+    android:padding="12dp"
+    android:layout_gravity="center" />
 
     <!-- Appointment List -->
     <ListView
         android:id="@+id/appointment_list"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:background="@color/light_gray"
+        android:padding="8dp"/>
 
     <!-- No Appointments Message -->
     <TextView
@@ -44,6 +52,8 @@
         android:text="No appointments yet"
         android:visibility="gone"
         android:gravity="center"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textColor="@color/gray"
+        android:layout_marginTop="16dp" />
 
 </LinearLayout>
