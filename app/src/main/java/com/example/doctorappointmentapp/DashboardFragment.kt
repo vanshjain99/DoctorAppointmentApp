@@ -12,6 +12,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import android.view.*
 
 class DashboardFragment : Fragment() {
 
@@ -27,27 +28,38 @@ class DashboardFragment : Fragment() {
         // Initialize the database helper
         dbHelper = AppointmentDatabaseHelper(requireContext())
 
-        // Retrieve the list of appointments from SQLite
-        val appointments = dbHelper.getAllAppointments()
-
-        // Set up a ListView to display the appointments
+        // Set up ListView and No Appointments TextView
         val listView: ListView = view.findViewById(R.id.appointment_list)
+        val noAppointmentsText = view.findViewById<TextView>(R.id.no_appointments_text)
+        val deleteAllButton = view.findViewById<Button>(R.id.delete_all_button)
 
-        // Create an adapter for the ListView using a custom layout
-        val adapter = AppointmentAdapter(appointments)
-        listView.adapter = adapter
+        // Function to refresh appointments
+        fun refreshAppointments() {
+            val appointments = dbHelper.getAllAppointments()
+            if (appointments.isEmpty()) {
+                noAppointmentsText.visibility = View.VISIBLE
+                listView.visibility = View.GONE
+            } else {
+                noAppointmentsText.visibility = View.GONE
+                listView.visibility = View.VISIBLE
+                val adapter = AppointmentAdapter(appointments)
+                listView.adapter = adapter
+            }
+        }
 
-        // Handle the case when there are no appointments
-        if (appointments.isEmpty()) {
-            val noAppointmentsText = view.findViewById<TextView>(R.id.no_appointments_text)
-            noAppointmentsText.visibility = View.VISIBLE
-        } else {
-            val noAppointmentsText = view.findViewById<TextView>(R.id.no_appointments_text)
-            noAppointmentsText.visibility = View.GONE
+        // Initial refresh
+        refreshAppointments()
+
+        // Delete all button logic
+        deleteAllButton.setOnClickListener {
+            dbHelper.clearAllAppointments()
+            Toast.makeText(requireContext(), "All appointments deleted", Toast.LENGTH_SHORT).show()
+            refreshAppointments()
         }
 
         return view
     }
+
 
     // Custom adapter to populate the list
     private inner class AppointmentAdapter(private val appointments: List<Appointment>) :

@@ -3,10 +3,12 @@
     android:id="@+id/fragment_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <!-- Heading -->
     <TextView
-        android:id="@+id/heading_text"
+        android:id="@+id/dashboard_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Your Appointments"
@@ -14,14 +16,27 @@
         android:textStyle="bold"
         android:gravity="center"
         android:paddingBottom="8dp"
-        android:paddingTop="27dp"/>
+        android:layout_marginTop="20dp"/>
 
-    <!-- ListView to display appointments -->
+    <!-- Delete All Button -->
+    <Button
+        android:id="@+id/delete_all_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete All Appointments"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Appointment List -->
     <ListView
         android:id="@+id/appointment_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
+    <!-- No Appointments Message -->
     <TextView
         android:id="@+id/no_appointments_text"
         android:layout_width="match_parent"
@@ -30,6 +45,5 @@
         android:visibility="gone"
         android:gravity="center"
         android:textSize="18sp" />
-
 
 </LinearLayout>

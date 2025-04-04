@@ -109,8 +109,17 @@ class AppointmentDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DA
             Log.e("DatabaseError", "Cursor is null")
         }
 
+
+
         return appointments
     }
+
+    fun clearAllAppointments() {
+        val db = writableDatabase
+        db.delete(TABLE_NAME, null, null)
+        db.close()
+    }
+
 
 
 
