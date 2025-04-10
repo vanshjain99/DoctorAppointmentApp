@@ -86,15 +86,19 @@
         android:textColor="@android:color/black"
         android:layout_marginBottom="8dp"/>
 
-    <!-- Clinic Info -->
+    <!-- Clinic Info (Clickable to open Maps) -->
     <TextView
         android:id="@+id/clinicInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Clinic: Heart Care Clinic\nAddress: 123 Heart Ave, City"
         android:textSize="14sp"
-        android:textColor="@android:color/black"
-        android:layout_marginBottom="24dp"/>
+        android:textColor="@android:color/holo_blue_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginBottom="24dp"
+        android:foreground="?attr/selectableItemBackground"/>
+
 
     <!-- Book Appointment Button -->
     <Button

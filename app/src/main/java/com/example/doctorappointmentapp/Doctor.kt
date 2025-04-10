@@ -8,8 +8,8 @@ data class Doctor(
     val certifications: String,
     val competencies: String,
     val languages: String,
-    val clinicName: String? = null, // Optional
-    val clinicAddress: String? = null, // Optional
-    val clinicLatitude: Double? = null, // Optional
-    val clinicLongitude: Double? = null // Optional
+    val clinicName: String? = null,
+    val clinicAddress: String? = null,
+    val clinicLatitude: Double? = null,
+    val clinicLongitude: Double? = null
 )

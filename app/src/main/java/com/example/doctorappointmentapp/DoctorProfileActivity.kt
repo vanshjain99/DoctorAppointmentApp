@@ -7,7 +7,8 @@ import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-
+import android.net.Uri
+import android.widget.Toast
 class DoctorProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -54,5 +55,16 @@ class DoctorProfileActivity : AppCompatActivity() {
             intent.putExtra("doctor_specialization", doctorSpecialization)
             startActivity(intent)
         }
+
+        val clinicTextView = findViewById<TextView>(R.id.clinicInfo)
+        clinicTextView.setOnClickListener {
+            val clinicAddress = "123 Heart Ave, City"
+            val uri = Uri.parse("https://www.google.com/maps/search/?api=1&query=" + Uri.encode(clinicAddress))
+            val intent = Intent(Intent.ACTION_VIEW, uri)
+            startActivity(intent)
+        }
+
+
+
     }
 }
