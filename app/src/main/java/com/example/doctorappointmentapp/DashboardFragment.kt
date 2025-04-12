@@ -22,18 +22,14 @@ class DashboardFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the fragment's layout
         val view = inflater.inflate(R.layout.fragment_dashboard, container, false)
 
-        // Initialize the database helper
         dbHelper = AppointmentDatabaseHelper(requireContext())
 
-        // Set up ListView and No Appointments TextView
         val listView: ListView = view.findViewById(R.id.appointment_list)
         val noAppointmentsText = view.findViewById<TextView>(R.id.no_appointments_text)
         val deleteAllButton = view.findViewById<Button>(R.id.delete_all_button)
 
-        // Function to refresh appointments
         fun refreshAppointments() {
             val appointments = dbHelper.getAllAppointments()
             if (appointments.isEmpty()) {
@@ -47,10 +43,8 @@ class DashboardFragment : Fragment() {
             }
         }
 
-        // Initial refresh
         refreshAppointments()
 
-        // Delete all button logic
         deleteAllButton.setOnClickListener {
             dbHelper.clearAllAppointments()
             Toast.makeText(requireContext(), "All appointments deleted", Toast.LENGTH_SHORT).show()

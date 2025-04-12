@@ -47,7 +47,6 @@ class AppointmentDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DA
 
 
 
-    // Method to insert a new appointment
     fun insertAppointment(
         date: String,
         time: String,
@@ -73,7 +72,6 @@ class AppointmentDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DA
     }
 
 
-    // Method to retrieve all appointments
     fun getAllAppointments(): List<Appointment> {
         val db = readableDatabase
         val cursor = db.query(TABLE_NAME, null, null, null, null, null, null)
@@ -88,7 +86,6 @@ class AppointmentDatabaseHelper(context: Context) : SQLiteOpenHelper(context, DA
                 Log.d("DatabaseQuery", "Column name at index $i: ${cursor.getColumnName(i)}")
             }
 
-            // Loop through the cursor and retrieve data
             while (cursor.moveToNext()) {
                 try {
                     val id = cursor.getLong(cursor.getColumnIndexOrThrow(COLUMN_ID))

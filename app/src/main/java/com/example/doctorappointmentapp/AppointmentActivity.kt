@@ -26,7 +26,6 @@ class AppointmentActivity : AppCompatActivity() {
         val extraServiceCheckbox = findViewById<CheckBox>(R.id.extra_service_checkbox)
         val bookButton = findViewById<Button>(R.id.book_appointment_button)
 
-        // Set up Date Picker Dialog
         datePicker.setOnClickListener {
             val calendar = Calendar.getInstance()
             val dateListener = DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
@@ -42,7 +41,6 @@ class AppointmentActivity : AppCompatActivity() {
             datePickerDialog.show()
         }
 
-        // Set up Time Picker Dialog
         timePicker.setOnClickListener {
             val calendar = Calendar.getInstance()
             val timeListener = TimePickerDialog.OnTimeSetListener { _, hourOfDay, minute ->
@@ -58,7 +56,6 @@ class AppointmentActivity : AppCompatActivity() {
             timePickerDialog.show()
         }
 
-        // Create an instance of AppointmentDatabaseHelper
         val dbHelper = AppointmentDatabaseHelper(this)
 
         bookButton.setOnClickListener {
@@ -71,27 +68,22 @@ class AppointmentActivity : AppCompatActivity() {
             }
             val extraService = extraServiceCheckbox.isChecked
 
-            // Validation to ensure all fields are filled
             if (date.isEmpty() || time.isEmpty() || appointmentType.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            // Create an instance of AppointmentDatabaseHelper
             val dbHelper = AppointmentDatabaseHelper(this)
 
-            // Example values for clinic website and location
             val clinicWebsite = "https://www.exampleclinic.com"
             val clinicLocation = "123 Main Street, City, Country"
 
             try {
-                // Insert appointment into the database
                 val appointmentId = dbHelper.insertAppointment(date, time, appointmentType, extraService, clinicWebsite, clinicLocation)
 
                 if (appointmentId != -1L) {
                     Toast.makeText(this, "Appointment booked successfully", Toast.LENGTH_SHORT).show()
 
-                    // Send data to ConfirmationActivity
                     val intent = Intent(this, ConfirmationActivity::class.java)
                     intent.putExtra("DATE", date)
                     intent.putExtra("TIME", time)

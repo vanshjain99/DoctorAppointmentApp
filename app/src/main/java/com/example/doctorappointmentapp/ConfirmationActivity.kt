@@ -12,17 +12,14 @@ class ConfirmationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_confirmation)
 
-        // Retrieve appointment details
         val date = intent.getStringExtra("DATE")
         val time = intent.getStringExtra("TIME")
         val appointmentType = intent.getStringExtra("APPOINTMENT_TYPE")
         val extraService = intent.getBooleanExtra("EXTRA_SERVICE", false)
 
-        // Find UI elements
         val confirmationText = findViewById<TextView>(R.id.confirmation_text)
         val dashboardButton = findViewById<Button>(R.id.dashboard_button)
 
-        // Display booking details
         val extraServiceText = if (extraService) "Yes" else "No"
         confirmationText.text = """
             Appointment Confirmed!
@@ -33,9 +30,7 @@ class ConfirmationActivity : AppCompatActivity() {
             Additional Services: $extraServiceText
         """.trimIndent()
 
-        // Set up the Dashboard Button click listener
         dashboardButton.setOnClickListener {
-            // Load the DashboardFragment using FragmentTransaction
             val transaction = supportFragmentManager.beginTransaction()
             transaction.replace(R.id.fragment_container, DashboardFragment())
             transaction.addToBackStack(null)  // Optional: Add the transaction to the back stack if you want back navigation
