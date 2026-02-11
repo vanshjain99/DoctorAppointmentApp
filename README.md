@@ -13,15 +13,15 @@ An Android application built with Kotlin that allows users to browse doctors, vi
 
 ## 📱 Screenshots
 
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/6b65d7c0-e189-469c-bae9-bf14fff9defb" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/24479cef-c27d-453c-bf64-67e22fd2d536" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/1da4e9dc-502f-4682-a503-45fc5883059d" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/87b8783e-b518-44f0-874f-20873971bd3e" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/aeb2ea8c-fa0a-4840-a100-32884db6a3f5" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/23b14189-2f74-4e83-a9c3-989ef4ec0796" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/174c23a0-38eb-4c3b-985c-71e6a785a6ad" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/bf6e1673-b34f-44c3-ac81-349f5d7e4ef6" />
-<img width="300" alt="image" src="https://github.com/user-attachments/assets/15fbcd68-ba0f-4ff9-b6d1-dbc6b0ccaad5" />
+<img width="200" alt="Screenshot_20250404_181439" src="https://github.com/user-attachments/assets/77d1edc7-2428-421e-9e05-6a6f71943774" />
+<img width="200" alt="Screenshot_20250404_181300" src="https://github.com/user-attachments/assets/aa8d9a17-2bcf-42f9-bb04-39b26953484c" />
+<img width="200" alt="Screenshot_20250404_181313" src="https://github.com/user-attachments/assets/a8d641de-6b9f-47cd-b430-bca9195ffd29" />
+<img width="200" alt="Screenshot_20250404_181323" src="https://github.com/user-attachments/assets/1c600046-233f-4b3f-adcf-c94691998375" />
+<img width="200" alt="Screenshot_20250404_181341" src="https://github.com/user-attachments/assets/d5eecfd6-6f72-4305-a19a-05a447db689a" />
+<img width="200" alt="Screenshot_20250404_181355" src="https://github.com/user-attachments/assets/54fdd6cc-58da-4554-8d87-afd660c09587" />
+<img width="200" alt="Screenshot_20250404_181409" src="https://github.com/user-attachments/assets/6100339f-1081-4bff-9e6f-62fd8eab51eb" />
+<img width="200" alt="Screenshot_20250404_181417" src="https://github.com/user-attachments/assets/dd7c92cc-868b-462f-a419-ea9969cf4313" />
+
 
 
 
