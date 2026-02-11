@@ -11,6 +11,20 @@ An Android application built with Kotlin that allows users to browse doctors, vi
 - Modern Material Design UI
 - Navigation component for seamless user experience
 
+## 📱 Screenshots
+
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/6b65d7c0-e189-469c-bae9-bf14fff9defb" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/24479cef-c27d-453c-bf64-67e22fd2d536" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/1da4e9dc-502f-4682-a503-45fc5883059d" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/87b8783e-b518-44f0-874f-20873971bd3e" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/aeb2ea8c-fa0a-4840-a100-32884db6a3f5" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/23b14189-2f74-4e83-a9c3-989ef4ec0796" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/174c23a0-38eb-4c3b-985c-71e6a785a6ad" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/bf6e1673-b34f-44c3-ac81-349f5d7e4ef6" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/15fbcd68-ba0f-4ff9-b6d1-dbc6b0ccaad5" />
+
+
+
 ## 🛠️ Tech Stack
 
 - **Language**: Kotlin
